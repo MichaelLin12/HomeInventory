@@ -51,20 +51,20 @@ In this application, several technologies are used:
 
 ## **Getting Started**
 
-Content for section two.
+Content for section
 
 ## **Design**
 
-Content for section two.
+The idea for this project is to creaete
 
 ## **What I Learned**
 
-Content for section two.
+Content for section
 
 ## **Improvements**
 
-Content for section two.
+Content for section
 
 ## **Credits**
 
-Content for section two.
+Content for section
