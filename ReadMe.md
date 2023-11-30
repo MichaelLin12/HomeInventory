@@ -33,21 +33,21 @@ The goal of better understanding the software design process through this projec
 
 In this application, several technologies are used:
 1. Spring Boot/Spring MVC
-    - Why?
+    - These are frameworks used to facilitate the architecture of our code to provide a web based GUI
 2. Elastic Search
-    - Why?
+    - Elastic Search allows us to search on files for specific file names and content
 3. MongoDB
-    - Why?
+    - This NoSQL database allows us to store files and file structure
 4. Docker
-    - Why?
+    - Containerization allows us to easily transfer working code from one machine to another without worrying about problems specific to machinery
 5. AWS
-    - Why?
+    - AWS provides us a way to deploy our code for production use
 6. GitHub Actions
-    - Why?
+    - Github Actions allows us to create a CI/CD pipeline allowing for faster Time to Market
 7. JUnit/Other testing Frameworks like Selenium
-    - Why?
+    - These Frameworks are used to test our code to ensure the project works as intended
 8. Github Issues
-    - Why?
+    - Github Issues allows us to track progress within our code base. It allows to put in writing design features and bugs
 
 ## **Getting Started**
 
@@ -55,7 +55,38 @@ Content for section
 
 ## **Design**
 
-The idea for this project is to creaete
+The idea for this project is to create a *file system* similar to Windows file explorer or even Linux. Therefore, we would display a *tree structure* of the *files and folders*. Files can be imported or created. Files also can be searched on either by title or by content. In effect, this is similar to how Google Drive or One Drive works, however, much less sophisticated. There will also be a *login feature* for differrent users to have different sets of files.
+
+<u>We will have a screen for the login and a screen for the file system and search</u>
+
+![Design of file system and search](./Images/Design.png)
+
+The search feature will include a search bar. This search bar allows users to query for files by title and content. Matching files will be displayed through a scrollable modal for one time use similar to that of Google Drive. On the side, there will be the user logo for logout and to display the user as well as a button to upload a file of <strike>any type</strike> select type and the option to create a basic text file. The tree display will display the logo. All files will be opened up in a new tab.
+
+Our login screen look something like this: ![Login screen](./Images/original-db63751ccab3a56c89e2d008b53d796e.jpg). Our initial implementation should be relatively basic. It should not contain any notion of encryption or have sign in with google be functional.
+
+>*The initial design shall be focused on getting the login screen working and the file system and search done as desired*
+
+The user workflow shall work as having the user 
+1. login 
+2. file system and search
+
+Internally, an MVC design approach shall be used. MVC consists of
+1. Controller
+    - LoginController(*Used for login*)
+    - SearchController(*Used to search file*)
+2. Model
+    - File Model
+    - Directory Model
+    - Search Model
+    - Hit Model
+3. View
+    - Login View
+    - SideBar View
+    - Search View
+    - File System View
+
+As mentioned above, MongoDB is used to store files while Elastic Search will be used to store these files
 
 ## **What I Learned**
 
